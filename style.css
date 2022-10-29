@@ -1,0 +1,252 @@
+:root{
+    --black:#181123;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    min-width: 200px;
+    background-color:var(--black);
+    backdrop-filter: blur(12px);
+    z-index: 5;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 2px;
+    z-index: 5;
+}
+
+.tautan{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.link{
+    margin: 0 auto;
+}
+
+.tautan > * > ul{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    list-style: none;
+}
+
+.tautan >* > ul > li>a{
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size:small;
+}
+/* .tautan >*> ul > li{
+    position: relative;
+}
+
+.tautan >*>ul>li::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.tautan>*>ul>li>a:hover li::before{
+    transform-origin: left;
+    transform: scaleX(1);
+} */
+
+.link > ul > li{
+    margin-left: 15px;
+}
+.akun > ul > li {
+    margin-right: 15px;
+}
+.akun button{
+    background-color: #4776E6;
+    border: none;
+    width: 86px;
+    height: 36px;
+    border-radius: 110px;
+    transition: 100ms;
+    cursor: pointer;
+}
+.akun button a{
+    text-decoration: none;
+    color: white;
+}
+.akun button:hover{
+    background-color: #4777e6dc;
+}
+.akun ul li:nth-child(1){
+    margin-top: 8px;
+}
+.ham {
+    display: none;
+}
+main{
+    height: 100vh;
+    width: 100%;
+    background-image: url("img/merapi.jpg");
+    background-size: cover;
+    background-position: center ;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content:left;
+}
+.konten{
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    min-width: 40%;
+}
+.tulisan{
+    max-width: 50%;
+    padding-bottom: 3%;
+}
+.tulisan h1{
+    font-size: 3rem;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 2px black;
+    animation-name: naik;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation:naik 1s infinite alternate-reverse;
+}
+@keyframes naik{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(12px);
+    }
+}
+.tombol button{
+    display: block;
+    border: none;
+    background-color: #4776E6;
+    padding: 15px;
+    border-radius: 110px;
+    color: white;
+    box-shadow: 1px 1px 20px #4776E6;
+    margin-top: 12px;
+}
+/* responsiv */
+@media (max-width:767px){
+    .ham{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        margin-bottom:5px ;
+        cursor: pointer;
+        z-index: 4;
+        transition: 500ms;
+    }
+    .ham span{
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        border-radius: 110px;
+        margin-top: 5px;
+        transition: 500ms;
+    }
+    .tautan{
+        position: absolute;
+        top: 0;
+        right: -100%;
+        transition: 500ms;
+        height: 100vh;
+        width: 60vw;
+        background-color: #181123;
+        /* text-align: center; */
+        flex-direction: column;
+        justify-content: center;
+    }
+    .tautan > *> ul {
+        flex-direction: column;
+        margin-top: 12px;
+    }
+    .tautan> * > ul >li {
+        margin-bottom: 30px;
+    }
+    .tautan> * > ul >li > a {
+        font-size: x-large;
+    }
+    .link,.akun{
+        display: flex;
+        color: white;
+        z-index: 3;
+    }
+    .link{
+        margin-bottom: 0px;
+    }
+    .akun{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .akun > ul > li{
+        margin-right: 0;
+        width: 100%;
+    }
+    .akun > ul {
+        margin-left: 12px;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+    .akun > ul > li:nth-child(1){
+        width: 75%;
+        background-color: #3b2b55;
+        padding: 5px;
+        border-radius: 110px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    } 
+    .akun > ul > li >a{
+        font-size: medium;
+    }
+    .akun > ul > li > button{
+        width: 80%;
+    }
+    .aktif{
+        right: 0;
+    }
+    .active span:nth-child(1){
+        transform: rotate(45deg) translateX(20px) translateY(13px);
+    }
+    .active span:nth-child(2){
+        width: 0;
+    }
+    .active span:nth-child(3){
+        transform: rotate(-45deg) translateY(5px);
+    }
+    .active{
+        transform: translateY(-11px);
+    }
+    .container{
+        background-position: center;
+    }
+}
