@@ -1,7 +1,10 @@
-document.querySelector(".ham").addEventListener('click',function(){
-    document.querySelectorAll(".tautan").forEach(function(a,b){
-        a.classList.toggle("aktif");
-    })
-    this.classList.toggle('active');
+let ham=document.querySelector(".ham");
+let tautan = document.querySelector(".tautan");
+ham.addEventListener('click',()=>{
+    tautan.classList.toggle('aktif');
+    ham.classList.toggle('active');
 })
+
+
+
 
