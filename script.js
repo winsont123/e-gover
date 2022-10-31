@@ -34,13 +34,23 @@ let layanan=[
         layanan:"My Pertamina",
         gambarBg:"dermaga.jpg",
         logo:"pertamina.png"
+    },
+    {
+        layanan:"My Pertamina",
+        gambarBg:"dermaga.jpg",
+        logo:"pertamina.png"
+    },
+    {
+        layanan:"My Pertamina",
+        gambarBg:"dermaga.jpg",
+        logo:"pertamina.png"
     }
 ]
 let tampung ='';
 layanan.forEach((a,b)=>{
     tampung +=`<div class="card" style="background-image: url('img/${a['gambarBg']}');">
                     <div class="info">
-                        <div class="layanan">${a['layanan']}</div>
+                        <div class="layanan"><h4>${a['layanan']}</h4></div>
                         <div class="box">
                          <img src="img/${a['logo']}" alt="logo pertamina">
                         </div>
