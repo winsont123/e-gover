@@ -78,6 +78,28 @@ nav{
 .link > ul > li{
     margin-left: 15px;
 }
+
+li ul{
+    display: none;
+    position: fixed;
+    top: 50px;
+    background-color: #181123;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #4776E6;
+    transition: 1s;
+}
+.pop{
+   display:block;
+}
+li ul li{
+    list-style: none;
+    padding: 10px;
+    font-family:sans-serif ;
+}
+li ul li a{
+    color: white;
+    text-decoration: none;
+}
 .akun > ul > li {
     margin-right: 15px;
 }
@@ -174,7 +196,7 @@ main svg{
     font-family: sans-serif;
 }
 .judul{
-    margin-left: 20px;
+    margin-left: 24px;
 
 }
 section#layanan{
@@ -188,7 +210,7 @@ section#layanan{
     display: flex;
     width: 95%;
     overflow: auto;
-    padding-left: 20px;
+    padding-left: 23px;
     padding-right: 10px;
 }
 .card{

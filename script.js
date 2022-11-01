@@ -4,6 +4,11 @@ ham.addEventListener('click',()=>{
     tautan.classList.toggle('aktif');
     ham.classList.toggle('active');
 })
+let icon=document.querySelector('i');
+icon.addEventListener('click',function(){
+    document.querySelector('li ul').classList.toggle('pop');
+    
+})
 let row=document.querySelector('.row');
 // let img= Array.from(document.querySelectorAll('figure img'));
 // img.forEach((a,b)=>{
