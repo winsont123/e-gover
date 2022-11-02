@@ -79,26 +79,36 @@ nav{
     margin-left: 15px;
 }
 
-li ul{
-    display: none;
+.sub-menu ul{
+    min-width: 140px;
+    height: 0px;
     position: fixed;
     top: 50px;
     background-color: #181123;
     border-radius: 10px;
     box-shadow: 1px 1px 10px #4776E6;
     transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    overflow: hidden;
 }
 .pop{
-   display:block;
+   height: 240px !important;
+   /* display: flex !important; */
 }
 li ul li{
     list-style: none;
     padding: 10px;
-    font-family:sans-serif ;
+    font-family:sans-serif;
+    border-bottom: 1px  white solid;
 }
 li ul li a{
     color: white;
     text-decoration: none;
+    font-size: large;
 }
 .akun > ul > li {
     margin-right: 15px;
@@ -197,8 +207,9 @@ main svg{
 }
 .judul{
     margin-left: 24px;
-
 }
+
+
 section#layanan{
     margin-top: 100px;
     width: 100%;
@@ -258,6 +269,28 @@ section#layanan{
     height: fit-content;
     margin-left:-65px ;
 }
+section#berita .judul{
+    margin-top: 50px;
+}
+.kartu{
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    background-size:cover;
+    background-position: center;
+    min-width: 300px;
+    min-height: 200px;
+    z-index: 1;
+    display: flex;
+    margin-right: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: flex-end;
+    overflow-x: hidden;
+}
+
+
 /* responsiv */
 @media (max-width:767px){
     .ham{
@@ -301,6 +334,7 @@ section#layanan{
         /* text-align: center; */
         flex-direction: column;
         justify-content: center;
+        overflow: auto;
     }
     .tautan > *> ul {
         flex-direction: column;
@@ -360,8 +394,19 @@ section#layanan{
     .container{
         background-position: center;
     }
-    .card figure img{
-        width: 170px;
+    .sub-menu{
+        width: 100%;
+    }
+    .sub-menu ul{
+        position: unset;
+        margin-top: 20px;
+    }
+    .sub-menu ul li a{
+        font-size:medium;
+    }
+    .kartu{
+        min-width:80vw;
+        min-height: 170px;
     }
 }
 @media (max-width:500px){
