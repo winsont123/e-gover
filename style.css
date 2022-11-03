@@ -277,7 +277,7 @@ section#berita .judul{
     border-radius: 12px;
     background-size:cover;
     background-position: center;
-    min-width: 300px;
+    min-width: 50vw;
     min-height: 200px;
     z-index: 1;
     display: flex;
@@ -289,8 +289,72 @@ section#berita .judul{
     align-items: flex-end;
     overflow-x: hidden;
 }
-
-
+.kartu .info{
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    height: 60%;
+    border-radius: 20px;
+    overflow: auto;
+    backdrop-filter: blur(0px);
+    background-color: transparent;
+}
+.kartu .info::-webkit-scrollbar-thumb{
+    background-color: white;
+}
+.kartu .info .deskripsi{
+    margin-top: 5px;
+    margin-left:14px;
+}
+section#tentangKami{
+    margin-top: 70px;
+}
+section#tentangKami .contain{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+section#tentangKami img{
+    border-radius: 12px;
+    width: 40vw;
+    height:266px;
+}
+section#tentangKami .tentang h2{
+    text-align: left;
+}
+section#tentangKami .tentang .text{
+    max-width: 400px;
+    margin-top: 15px;
+    text-align: left;
+}
+section#tentangKami .tentang{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+section#bantuan{
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section#bantuan .forming form .cover{
+    padding: 20px;
+    border-radius: 110px;
+    background-color: black;
+    width: 100%;
+}
+section#bantuan .forming form input{
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+}
+section#bantuan .forming form input:active{
+    border: none;
+    border-bottom: 2px solid black;
+}
 /* responsiv */
 @media (max-width:767px){
     .ham{
@@ -407,6 +471,22 @@ section#berita .judul{
     .kartu{
         min-width:80vw;
         min-height: 170px;
+    }
+    section#tentangKami .contain{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    section#tentangKami{
+        justify-content: center;
+        align-items: center;
+    }
+    section#tentangKami img{
+        width: 80vw;
+    }
+    section#tentangKami h2{
+        margin-top: 12px;
     }
 }
 @media (max-width:500px){
